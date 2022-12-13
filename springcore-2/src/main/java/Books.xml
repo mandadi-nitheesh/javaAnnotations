@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+<bean  id="science" class="com.example.demo.Sciencebook"    ></bean>
+
+<bean  id="math" class="com.example.demo.Mathbook"    ></bean>
+
+
+<bean  id="student" class="com.example.demo.Student"  >
+
+<!-- for setter injection we use property -->
+
+<!-- <property name="book" ref="science"  ></property> -->
+
+
+<!-- for constructor injection we use constructor-arg -->
+
+<constructor-arg  name="bookname"  value="thermodynamics"   ></constructor-arg>
+
+<constructor-arg name="book"  ref="science"   ></constructor-arg>
+
+
+</bean>
+
+</beans>
